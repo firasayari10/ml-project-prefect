@@ -1,6 +1,6 @@
 """Step 05: scheduled deployments (acts as the worker — keep it running).
 
-Before running:
+    Before running:
     prefect config set PREFECT_API_URL="http://127.0.0.1:4200/api"
 """
 
@@ -17,7 +17,8 @@ from pipeline_prefect import (
 if __name__ == "__main__":
     all_dep = all_flow.to_deployment(
         name="ml-pipeline-all",
-        cron="0 2 * * *",  # every day at 02:00
+        cron="0 2 * * *", 
+	parameters={"pull_repo":True},
         tags=["full-pipeline", "mlops"],
     )
     train_dep = train_flow.to_deployment(

@@ -37,7 +37,7 @@ DEFAULT_N_ESTIMATORS = 100
 PROJECT_FILES = ["model_pipelineO.py", "mainO.py", "pipeline_prefect.py"]
 
 # Étape 06 : dépôt git distant (à remplacer par votre URL)
-REPO_URL = os.getenv("REPO_URL", "https://github.com/<user>/<repo>.git")
+REPO_URL = os.getenv("REPO_URL", "https://github.com/firasayari10/ml-project-prefect.git")
 REPO_DIR = os.getenv("REPO_DIR", ".")
 
 
